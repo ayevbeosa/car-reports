@@ -1,0 +1,12 @@
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "make":"Toyota",
+  "model":"Highlander",
+  "year":2025,
+  "mileage":100,
+  "lng": 0,
+  "lat": 0,
+  "price": 250000
+}
