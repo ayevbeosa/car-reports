@@ -3,8 +3,8 @@ Content-Type: application/json
 
 {
   "make":"Toyota",
-  "model":"Highlander",
-  "year":2025,
+  "model":"Camry",
+  "year":2022,
   "mileage":100,
   "lng": 0,
   "lat": 0,
