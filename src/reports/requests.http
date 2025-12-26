@@ -15,4 +15,4 @@ Content-Type: application/json
 PATCH http://localhost:3000/reports/2
 Content-Type: application/json
 
-{"approved": false}
+{"approved": true}
