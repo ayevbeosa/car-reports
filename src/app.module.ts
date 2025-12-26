@@ -4,13 +4,11 @@ import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
 import { ReportsModule } from './reports/reports.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from './users/user.entity';
-import { Report } from './reports/report.entity';
 import { APP_PIPE } from '@nestjs/core';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { AppDataSource } from './data-source';
 
 const cookieSession = require('cookie-session');
-const dbConfig = require('../ormconfig.js');
 
 @Module({
   imports: [
@@ -18,7 +16,7 @@ const dbConfig = require('../ormconfig.js');
       isGlobal: true,
       envFilePath: `.env.${process.env.NODE_ENV}`,
     }),
-    TypeOrmModule.forRoot(dbConfig),
+    TypeOrmModule.forRoot({ ...AppDataSource.options, autoLoadEntities: true }),
     UsersModule,
     ReportsModule,
   ],
