@@ -9,6 +9,9 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    env:
+      DB_NAME: 'test.sqlite'
+      COOKIE_KEY: 'lkjhgf'
 
     strategy:
       matrix:
