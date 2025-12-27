@@ -48,6 +48,9 @@ npm install
 2. Set Environment Keys Create a .env file (or use default dev config):
 
 ```bash
+DB_NAME=db.sqlite
+```
+```bash
 COOKIE_KEY=asdfjkl123
 ```
 3. Run in Development Mode
@@ -57,6 +60,7 @@ npm run start:dev
 
 ## 🧪 Testing
 The application includes a comprehensive test suite to ensure reliability.
+First follow [option two of Getting Started](#option-2-run-locally)  to create separate config for test
 ```bash
 # Run Unit Tests
 npm run test
